@@ -16,13 +16,7 @@ public class BookService {
     public List<Book> getBooks() {
         return repository.findAll();
     }
-
-    /*
-    TODO-1: Only title and author should be provided during the creation of a new book.
-    The ID is created by default by the database so it should not be provided at all.
-    Therefore, the pageNumber and the releaseDate exists also in the Book model.
-    A solution to create a book without the ID, the pageNumber and the releaseDate ?
-     */
+    
     public List<Book> createBooks(List<Book> toCreate) {
         return repository.saveAll(toCreate);
     }
@@ -37,8 +31,8 @@ public class BookService {
         return repository.saveAll(toUpdate);
     }
 
-    //TODO-3: should I use Integer here or int ? Why ?
-    public Book deleteBook(int bookId) {
+
+    public Book deleteBook(Integer bookId) {
         /*
         TIPS: From the API, the Class Optional<T> is :
         A container object which may or may not contain a non-null value.
