@@ -14,13 +14,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Book {
-    /*
-    TODO-4-a: Note that i use serial type for ID in database. What does serial do ?
-    TODO-4-b: Should I map it with int ? Fix it if there is a problem
-     */
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String title;
     private String author;
     private int pageNumber;
